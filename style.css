@@ -57,6 +57,9 @@ form button {
     margin-bottom: 5px;
 }
 
+#model {
+    width:100%
+}
 /* Style the select element */
 form select {
     height: 30px; /* Adjust the height as needed */
