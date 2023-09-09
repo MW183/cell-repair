@@ -36,38 +36,29 @@ function updatePhoneModels() {
 const deviceSelect = document.getElementById('deviceSelect');
 deviceSelect.addEventListener('change', updatePhoneModels);
 
-// Function to handle form submission
 function handleSubmit(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
+    event.preventDefault();
 
-    // Get the entered name, device, and otherDevice (if "Other" is selected)
-    const nameInput = document.getElementById('name');
-    const deviceSelect = document.getElementById('deviceSelect');
-    const otherDeviceInput = document.getElementById('otherDevice');
+    const name = document.getElementById('name').value;
+    const device = document.getElementById('deviceSelect').value;
+    const otherDevice = document.getElementById('otherDevice').value;
     const responseMessage = document.getElementById('responseMessage');
 
-    const name = nameInput.value;
-    const device = deviceSelect.value;
-    const otherDevice = otherDeviceInput.value;
-
-    // Display the response message
     responseMessage.textContent = `Thanks, ${name}! We'll reach out to you shortly. You've selected ${device}${device === 'Other' ? ': ' + otherDevice : ''}.`;
+    responseMessage.classList.add('visible');
 
-    // Clear the form inputs
-    nameInput.value = '';
-    deviceSelect.value = ''; // Set a default device
-    otherDeviceInput.value = ''; // Clear the "Other" device input field
-
-    // Hide the response message after 5 seconds
-    responseMessage.style.display = 'block';
-    setTimeout(() => {
-        responseMessage.style.display = 'none';
-    }, 5000);
+    document.getElementById('name').value = '';
+    document.getElementById('deviceSelect').value = '';
+    document.getElementById('otherDevice').value = '';
 }
 
-// Attach the form submission event listener
+document.getElementById('responseMessage').addEventListener('click', () => {
+    document.getElementById('responseMessage').classList.remove('visible');
+});
+
+document.getElementById('deviceSelect').addEventListener('change', updatePhoneModels);
+
 const form = document.querySelector('form');
 form.addEventListener('submit', handleSubmit);
 
-// Initialize phone models and input visibility when the page loads
 updatePhoneModels();
