@@ -38,7 +38,6 @@ deviceSelect.addEventListener('change', updatePhoneModels);
 
 // Function to handle form submission
 function handleSubmit(event) {
-    event.preventDefault();
 
     const nameInput = document.getElementById('name');
     const deviceSelect = document.getElementById('deviceSelect');
@@ -59,6 +58,8 @@ function handleSubmit(event) {
     setTimeout(() => {
         responseMessage.style.display = 'none';
     }, 5000);
+
+    event.currentTarget.submit(); // Actually submit the form
 }
 
 const form = document.querySelector('form');
