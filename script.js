@@ -3,15 +3,16 @@ function updatePhoneModels() {
     const deviceSelect = document.getElementById('deviceSelect');
     const otherDeviceInput = document.getElementById('otherDeviceInput');
     const modelSelect = document.getElementById('model');
+    const modelDiv = document.getElementById('modelDiv');
 
     const selectedDevice = deviceSelect.value;
 
     if (selectedDevice === 'Other') {
         otherDeviceInput.style.display = 'block';
-        modelSelect.disabled = true;
+        modelDiv.style.display = 'none';
     } else {
         otherDeviceInput.style.display = 'none';
-        modelSelect.disabled = false;
+        modelDiv.style.display = 'block';
     }
 
     const deviceOptions = {
@@ -39,16 +40,10 @@ deviceSelect.addEventListener('change', updatePhoneModels);
 function handleSubmit(event) {
     event.preventDefault();
 
-    const modelSelect = document.getElementById('model');
-    const deviceSelect = document.getElementById('deviceSelect');
     const nameInput = document.getElementById('name');
+    const deviceSelect = document.getElementById('deviceSelect');
     const otherDeviceInput = document.getElementById('otherDevice');
     const responseMessage = document.getElementById('responseMessage');
-
-    if (deviceSelect.value !== 'Other' && modelSelect.value === '--') {
-        alert("Please select a device model.");
-        return;
-    }
 
     const name = nameInput.value;
     const device = deviceSelect.value;
