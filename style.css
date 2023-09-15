@@ -28,64 +28,9 @@ main {
     display: flex; /* Enable side-by-side layout */
 }
 
-/* Style the form container */
-section {
-    flex: 1; /* Expand to fill available space */
-    padding-right: 20px; /* Add spacing between image and form */
-}
-
-/* Style the form */
-form {
-    display: flex;
-    flex-direction: column; /* Stack form elements vertically */
-    align-items: flex-start; /* Align elements to the left within the column */
-}
-
 /* Style the image */
 img {
     max-width: 100%;
     height: auto;
     display: block; /* Remove any inline spacing */
-}
-
-/* Style the form elements to stack vertically */
-form label,
-form input,
-form select,
-form button {
-    display: block;
-    margin-bottom: 5px;
-}
-
-#model {
-    width:100%
-}
-/* Style the select element */
-form select {
-    height: 30px; /* Adjust the height as needed */
-    padding: 5px; /* Set the same padding as the text input */
-}
-
-/* Style the response message */
-#responseMessage.visible {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
-    text-align: center;
-    display: block; /* Initially hide the response message */
-}
-
-/* Style the form button */
-form button {
-    background-color: #3498db; /* Blue */
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-/* Style the form button on hover */
-form button:hover {
-    background-color: #2980b9; /* Darker blue */
 }
