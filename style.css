@@ -1,36 +1,125 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #dbdbdb; /* Set your desired background color */
+/* Reset & Global Styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
 }
 
-/* Style the header */
-header {
-    background-color: #2c3e50; /* Blue-gray */
-    color: #dbdbdb;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Center the header text */
-header h1 {
-    margin: 0;
-    padding: 0;
-}
-
-/* Style the main content */
 main {
-    background-color: #dbdbdb; /* White */
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex; /* Enable side-by-side layout */
+  background-color: #fff9eb;
+  margin: 4em 0 2em;
 }
 
-/* Style the image */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block; /* Remove any inline spacing */
+/* Header & Footer Styles */
+header, footer {
+  background-color: #2c3e50;
+  padding: 1em;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+header {
+  justify-content: space-between;
+  top: 0;
+}
+
+footer {
+  justify-content: center;
+  bottom: 0;
+}
+
+/* Logo & Navigation Styles */
+.button-style {
+  padding: 10px 20px;
+  background-color: #ffe3c2;
+  border: 1px solid #ffe6dc;
+  border-radius: 25px;
+  text-decoration: none;
+  color: black;
+  margin-right: 25px;
+}
+
+.logo-container, .nav-buttons {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container:hover, .nav-buttons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  width: 20px;
+  height: auto;
+  margin-right: 10px;
+}
+
+
+/* Main Content Styles */
+/* About Section */
+#about, #formpage {
+  min-height: 80vh;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+}
+
+#about {
+  justify-content: space-around;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box {
+  width: 30vw;
+  min-width: 200px;
+  background-color: #2c3e50;
+  padding: 1em;
+  border: 1px solid #4A6B7D;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: white;
+  word-wrap: break-word;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+/* Form Page */
+#formpage {
+  justify-content: center;
+}
+
+.form-container {
+  background-color: #2c3e50;
+  border-radius: 25px;
+  padding: 50px;
+  max-height: 60vh;
+  max-width: 60vw;
+}
+
+iframe {
+  width: 50vw;
+  height: 55vh;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #about {
+    flex-direction: column;
+  }
+
+  .box, .logo-big {
+    width: 80%;
+    margin-bottom: 1em;
+  }
 }
