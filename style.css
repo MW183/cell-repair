@@ -26,6 +26,10 @@ header {
   top: 0;
 }
 
+header h1 {
+  display: inline;
+}
+
 footer {
   justify-content: center;
   bottom: 0;
@@ -116,6 +120,10 @@ iframe {
 @media (max-width: 575.98px) {
   header, footer {
     flex-direction: column;
+    padding: 0.5em;
+  }
+  header h1 {
+    display: none;
   }
   .button-style, .logo {
     padding: 5px 10px;
@@ -130,6 +138,10 @@ iframe {
 @media (min-width: 576px) and (max-width: 767.98px) {
   header, footer {
     flex-direction: column;
+    padding: 0.5em;
+  }
+  header h1 {
+    display: none;
   }
   .button-style, .logo {
     padding: 6px 12px;
