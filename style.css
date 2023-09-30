@@ -112,14 +112,54 @@ iframe {
   height: 55vh;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  #about {
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  header, footer {
     flex-direction: column;
   }
+  .button-style, .logo {
+    padding: 5px 10px;
+  }
+  .box {
+    width: 90%;
+    margin: 1em auto;
+  }
+}
 
-  .box, .logo-big {
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  header, footer {
+    flex-direction: column;
+  }
+  .button-style, .logo {
+    padding: 6px 12px;
+  }
+  .box {
+    width: 85%;
+    margin: 1em auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .box {
     width: 80%;
-    margin-bottom: 1em;
+    margin: 1em auto;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .box {
+    width: 60%;
+    margin: 1em auto;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .box {
+    width: 50%;
+    margin: 1em auto;
   }
 }
