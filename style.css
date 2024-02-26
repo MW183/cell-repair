@@ -5,7 +5,7 @@ body, h1, h2, h3, p, ul, li {
 }
 
 main {
-  background-color: #fff9eb;
+  background-color: #ffe3c2;
   margin: 4em 0 2em;
 }
 
@@ -47,7 +47,7 @@ footer {
 }
 
 .large-button {
-  display: inline-block;
+  display: flex;
   padding: 10px 20px;
   background-color: #4A6B7D; /* Blue */
   color: white;
@@ -96,6 +96,11 @@ footer {
 
 #about {
   justify-content: space-around;
+}
+
+#formpage{
+  flex-direction: column;
+  justify-content: center;
 }
 
 .box-container {
