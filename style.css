@@ -46,6 +46,25 @@ footer {
   margin-right: 25px;
 }
 
+.large-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4A6B7D; /* Blue */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 20px 0; /* Spacing around the button */
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Hover effect */
+.large-button:hover {
+  background-color: #4A6B7D;
+}
+
+
 .logo-container, .nav-buttons {
   display: flex;
   align-items: center;
@@ -62,12 +81,13 @@ footer {
   width: 20px;
   height: auto;
   margin-right: 10px;
+  display: inline;
 }
 
 
 /* Main Content Styles */
 /* About Section */
-#about, #formpage {
+#index, #about, #formpage {
   min-height: 80vh;
   padding: 2em;
   display: flex;
@@ -132,25 +152,45 @@ iframe {
     width: 90%;
     margin: 1em auto;
   }
+  .logo {
+    display: hidden;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  header, footer {
-    flex-direction: column;
-    padding: 0.5em;
-  }
-  header h1 {
-    display: none;
-  }
-  .button-style, .logo {
-    padding: 6px 12px;
-  }
-  .box {
-    width: 85%;
-    margin: 1em auto;
-  }
+    header, footer {
+        flex-direction: column;
+        padding: 0.5em;
+    }
+
+        header h1 {
+            display: none;
+        }
+
+    .button-style, .logo {
+        padding: 6px 12px;
+    }
+
+    .box {
+        width: 85%;
+        margin: 1em auto;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .image-container {
+        display: none;
+    }
 }
+
+
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -175,3 +215,17 @@ iframe {
     margin: 1em auto;
   }
 }
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+    .hamburger div {
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
